@@ -1,0 +1,158 @@
+/* css Zen Garden submission 034 - 'zengrounds' by Andrea Piernock,  http://www.snooble.com/ */
+/* css released under Creative Commons ShareAlike License v1.0 - http://creativecommons.org/licenses/sa/1.0/  */
+/* All associated graphics copyright 2003, Andrea Piernock */
+/* Style based on newgrounds.com, adapted with permission */
+
+
+/* IMPORTANT */
+/* This design is not a template. You may not reproduce it elsewhere without the designer's written permission. */
+/* The CSS itself may freely be used for anything you wish, but the associated graphics belong to the designer. */
+/* What you may use - .css files. What you may not use - .jpg, .gif, and .png files. */
+
+@font-face {
+	font-family: 'Topaz-8';
+	src: url('Topaz-8.ttf');
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #222;
+	color: #fff;
+	font-family: Verdana, Helvetica, Arial, sans-serif; }
+
+a { background: transparent; text-decoration: none; }
+a:link { color: #1E90FF; }
+a:visited { color: #1E90FF; }
+a:active { color: #B54ED6; }
+a:hover { color: #B54ED6; }
+abbr { cursor: help; border-bottom: 1px dotted #fff; }
+a abbr { cursor: help; border-bottom: 1px dotted #fc3; }
+h3 { font-family: Topaz-8; }
+
+topaz8 { font-family: 'Topaz-8'; font-size: 0.8em; }
+topaz8-blue { font-family: 'Topaz-8'; color: #1E90FF; font-size: 0.9em; }
+topaz8-red { font-family: 'Topaz-8'; color: #FF0000; font-size: 0.9em; }
+
+.page-wrapper {
+	position: relative;
+	top: 0;
+	left: 50%;
+	width: 750px;
+	margin: 0 0 0 -350px;
+	padding: 0;
+	background: #222; }
+
+.page-wrapper .intro {
+	margin: 0 125px 0 0;
+	padding: 10px 0 0 0;
+	border-right: 10px solid #F7D266; }
+.page-wrapper .intro header {
+	width: 550px;
+	height: 105px;
+	margin: 0 10px;
+	padding: 10px 0 0 0;
+	font-size: 1.5em;
+	font-family: Topaz-8;}
+
+.page-wrapper .intro .summary { margin: 0 20px; padding: 0 0 10px 0; }
+.page-wrapper .intro .summary p:last-child {
+	margin: 10 0 0 0;
+	padding: 0;
+	font-size: 0.7em;
+	font-weight: bold;
+	text-align: center; }
+
+.page-wrapper .intro .preamble {
+	width: 550px;
+	margin: 0 10px 15px 10px;
+	padding: 0 0 15px 0;}
+.page-wrapper .intro .preamble h3 {
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.page-wrapper .intro .preamble p {
+	margin: 0;
+	padding: 5px 10px;
+	font-size: 0.9em; }
+
+.page-wrapper .supporting {
+	margin: 0 125px 0 0;
+	padding: 0;
+	border-right: 10px solid #F7D266; }
+.page-wrapper .supporting div {
+	width: 550px;
+	margin: 0 10px 15px 10px;
+	padding: 0;}
+.page-wrapper .supporting h3 {
+	height: 65px; margin: 0; padding: 0;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.page-wrapper .supporting p { margin: 0; padding: 0 10px 10px 15px; font-size: 0.9em; }
+.page-wrapper .supporting p:nth-child(2) { margin-top: -35px; padding-right: 75px; }
+.page-wrapper .supporting .game p:nth-child(3){
+	padding-bottom: 25px;}
+
+.page-wrapper .supporting footer {
+	margin: 0;
+	padding: 0 0 25px 0;
+	background: none;
+	font-size: 0.8em;
+	font-weight: bold;
+	text-align: center; }
+.page-wrapper .supporting footer a {
+	margin: 0;
+	padding: 0 10px;
+	border-left: 5px solid #666;
+	border-right: 5px solid #666; }
+.page-wrapper .supporting footer a:hover { background: #444; color: #fff; }
+
+.page-wrapper .sidebar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 190px;
+	margin: 0;
+	padding: 5px 0 0 0;}
+.page-wrapper .sidebar .wrapper div h3 {
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.page-wrapper .sidebar .wrapper .anchor-selection a { display: block; width: 100%; }
+.page-wrapper .sidebar .wrapper .anchor-selection a.designer-name { display: inline; width: auto; }
+
+.page-wrapper .sidebar .wrapper .anchor-selection {
+	margin: 0 0 10px 0;
+	padding: 0 0 20px 0;}
+.page-wrapper .sidebar .wrapper #lfavorites,
+.page-wrapper .sidebar .wrapper .design-archives{
+	margin: 0 0 10px 0;
+	padding: 0 0 15px 0;}
+.page-wrapper .sidebar .wrapper .anchor-selection h3.select,
+.page-wrapper .sidebar .wrapper #lfavorites h3.favorites,
+.page-wrapper .sidebar .wrapper .design-archives h3.archives{
+	height: 40px;
+	margin: 0;
+	padding: 0; }
+
+.page-wrapper .sidebar .wrapper .anchor-selection ul {
+	list-style: none;
+	margin: 0 10px 0 0;
+	padding: 0 10px 5px 80px;}
+.page-wrapper .sidebar .wrapper #lfavorites ul,
+.page-wrapper .sidebar .wrapper .design-archives ul{
+	list-style: none;
+	margin: 0 10px 0 0;
+	padding: 0 10px 5px 40px;}
+.page-wrapper .sidebar .wrapper .anchor-selection li,
+.page-wrapper .sidebar .wrapper #lfavorites li,
+.page-wrapper .sidebar .wrapper .design-archives li{
+	margin: 0;
+	padding: 0;
+	font-size: 0.75em; }

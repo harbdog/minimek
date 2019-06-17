@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MiniMek - Urbie Defense</title>
+
+<!-- jQuery [this must be here but you can update to your preferred CDN or copy of jQuery] -->
+<script language="javascript" src="lib/jquery-1.7.1.js" ></script>
+<script language="javascript" src="src/UrbieDefense.js"></script>
+
+</head>
+<body>
+    <div id="container" style="position:absolute; left:0px; top:0px; cursor:none; border:2px solid; width:800px; height:600px;">
+    	
+        <canvas id="canvas" width="800" height="600" >Your browser dosen't support HTML5, upgrade to the recent browser version!
+        </canvas>
+        
+    </div>
+	
+	<!-- starting screen that gets click to begin the game -->
+    <img id="BtnImgStart" style="position:absolute; left:2px; top:2px; cursor:pointer; clear:left;" src="images/urbie-defense.png" />
+	
+	<!-- the choose weapon buttons get hidden using code and shown only after the start screen is pressed -->
+	<img id="chooseWeapon" style="position:absolute; left:2px; top:25px; cursor:none; clear:left;" src="images/choose-weapon.png"/>
+	<img id="ac10" style="position:absolute; left:2px; top:75px; cursor:pointer; clear:left;" type="button" value="Choose AC10" src="images/choose-weapon-ac10.png"/>
+	<img id="hvac10" style="position:absolute; left:2px; top:175px; cursor:pointer; clear:left;" type="button" value="Choose HVAC10" src="images/choose-weapon-hvac10.png"/>
+	<img id="uac10" style="position:absolute; left:2px; top:275px; cursor:pointer; clear:left;" type="button" value="Choose UAC10" src="images/choose-weapon-uac10.png"/>
+	<img id="rac5" style="position:absolute; left:2px; top:375px; cursor:pointer; clear:left;" type="button" value="Choose RAC5" src="images/choose-weapon-rac5.png"/>
+	<img id="lbx10" style="position:absolute; left:2px; top:475px; cursor:pointer; clear:left;" type="button" value="Choose LBX10" src="images/choose-weapon-lbx10.png"/>
+    
+	<!-- uncomment following for debug information such as FPS and bounds toggle -->
+	<div style="position:absolute; left:10px; top:640px; clear:left;" id="fps"></div>
+    <!--input style="position:absolute; left:100px; top:640px;" id="showHideBounds" type="button" value="Show/hide Bounds"/-->
+	
+	<!-- the start new game button gets hidden using js code and shown when the game over screen appears -->
+	<img style="position:absolute; left:166px; top:544px; cursor:pointer; clear:left;" id="startNewGame" type="button" value="Start New Game" src="images/start-new-game.png"/>
+	
+	
+	<div style="position:absolute; left:10px; top:675px; clear:left;"><a href="../index.htm">Back to MiniMek games page</a></div>
+</body>
+</html>

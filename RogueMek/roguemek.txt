@@ -1,0 +1,197 @@
+Controls:
+'R' - target nearest enemy mech
+'T','Y' - target next/prev closest enemy mech
+'WASD' or arrow keys - rotate and move mech
+'.' period - end turn
+'J' - toggle jump jets (if equipped, indicated if JP appears below AP indicator)
+'1-0' number keys/numpad - fire weapon with that number slot (or move to indicated direction when jumping)
+'P','K' - Punch/Kick
+'L' - toggle free look mode
+'/' forward slash - toggle numerical/HTAL graph damage displays
+'pgup/pgdn' - scroll messages up/down
+'home/end' - view first/last message
+
+'-/+' - decrease/increase animation time (better performance/smoother animations)
+'H' - toggle Hex map numbers
+'[',']' left/right square brackets - cycle prev/next color theme
+
+Design:
+--------------------------------------------------------------------------------
+---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . | 
+   \   /   \   /   \   /   \   /   \   /   \   /***\   /   \   /   \   /   \   / Target
+ . |---| . |---| . |---| . |---| . |---| . |---|*.*|---| . |---| . |---| . |---| 
+   /   \   /***\   /   \   /   \   /   \   /...\***/***\   /   \   /   \   /   \ Atlas		AS7-D
+---| . |---|*C*|---| . |---| . |---| . |---|...|---|*.*|---| . |---| . |---| . | Hex: 0204	Range:5
+   \   /   \**\/   \   /   \   /   \   /   \.../***\***/   \   /   \   /   \   / 
+ . |---| . |---| . |---| . |---| . |---| . |---|*.*|---| . |---| . |---| . |---|      H:9(3)		
+   /   \   /   \   /   \   /.|.\   /   \   /...\***/###\   /   \   /   \   /   \ LA:15(6)	RA:15(6)
+---| . |---| . |---| . |---|.A.|---| . |---|...|---|-B#|---| . |---| . |---| . | CT:30(10)	CTR:10
+   \   /   \   /   \   /   \.../   \   /   \.../===\###/   \   /   \   /   \   / LT:25(8)	RT:25(8)
+ . |---| . |---| . |---| . |---| . |---| . |---|=.=|---| . |---| . |---| . |---| LTR:8		RTR:8	
+   /   \   /   \   /   \   /   \   /   \   /   \===/   \   /   \   /   \   /   \ LL:20(10)	RL:20(10)
+---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . | 
+   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   / MLAS		SRM6
+ . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| SLAS		SRM4
+   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \ MLAS
+---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . | MLAS
+   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   / SRM4
+ . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| 
+   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \ 		   	40|SD100%
+---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . | 		   	38|AE58%
+   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   / 		   	36|SD83%			
+ . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| 		   	35| -5MP			
+---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . | 		   	34|+4AIM			
+   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   / 		   	33|AE28%			
+ . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| 		   	32|SD58%			
+   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \ 		   	30| -4MP			
+---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . |---| . | 		   	29| AE8%			
+   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   /   \   / 		   	28|SD28%			
+-------------------------------------------------------------------------------- 		   	27|+3AIM			
+AP:3		>This is a message that can go only until the edge of the map displa 		   	25| -3MP			
+																							24| SD8%			
+Hex:0101	Heading:SE	Walking									 		   					23|+2AIM			
+																							20| -2MP			
+			H:9(3)						1-CT:MLAS .........	6-LT:SRM6[200]/60%	 		   	18|+1AIM			
+LA:15(6)				RA:15(6)		2-CT:SLAS/25%		7-LT:SRM4 ...		 		-->	15| -1MP			
+LT:25(8)	CT:30(10)	RT:25(8)		3-RA:MLAS ......	8:----						   	--|-----			
+LTR:8		CTR:10		RTR:8			4-RA:MLAS/50%		9:----				 		Heat:15.0 			
+LL:20(10)				RL:20(10)		5-LT:SRM4 .			0:----				 	   		   ^
+										P-PUNCH/75%			K-KICK/50%					 Diff+5.2 -1.5
+-----------------------------------------------------------------------------------------------------
+* Heat scale above starting at 10 Heat Sinks so base heat effects of +5 begin at 15
+SD = Shutdown
+AE = Ammo Explosion
++AIM = Increased aiming difficulty
+-MP = Decrease top speed (can lower round AP)
+
+Pressing T selects next target, R selects previous target
+
+AP = Action points total remaining for this turn. Can be used for all movement, or movement then weapon fire, or just weapon fire.
+W/R | AP
+----|---
+1/2 | 1
+2/3 | 2
+3/5 | 2 *
+4/6 | 2 **
+5/8 | 3
+6/9 | 3 *
+7/11| 3 **
+8/12| 3 ***
+9/14| 3 ****
+
+*-**** Mechs at the top end of their AP spectrum will get bonuses on enemy toHit rolls against
+
+
+[200] = ammo
+......... = weapon cooldown timer (starts at 9, the round after being fired, ends after 1)
+/XX% = percent chance to hit the target with that weapon
+ 
+ *** = light trees (light green)
+ %%% = heavy trees (green)
+ ... = light rocks (light brown)
+ ::: = heavy rocks (brown)
+ 1 1 = height +1 terrain
+ 2 2 = height +2 terrain
+ ~~~
+ 1~1 = level 1 water (light blue)
+ ~~~
+ 2~2 = level 2 water (blue)
+ ~~~
+ !!! = fire (red)
+ ??? = smoke (gray)
+
+ 
+ 
+Possible HTAL "bar graph" style damage displays for player and target:
+----------------------------------
+PilotName	>This is a message t
+Centurion   CN9-A		AP:3	
+Hex:0101	Heading:SE	Walking	
+_   _ _ _ _ _ _  _  _   _  _	
+|   | | | | | |  |  |   |  |	
+|_  |_| |_| |_|  |_ |_  |_ |_	
+||  ||| ||| |||  || ||  || ||	
+||  ||| ||| |||  || ||  || ||	
+||  ||| ||| |||  || ||  || ||	
+HD  LTR CTR RTR  LA RA  LL RL	
+----------------------------------
+CTR, RTR, LTR = e.g. LeftTorso Armor, LeftTorso Internal, LeftTorso Rear
+
+
+Target
+
+Atlas		AS7-D
+Hex: 0204	Range:5
+ _   _ _ _ _ _ _  
+ |   | | | | | |  
+ |_  |_| |_| |_|  
+ ||  ||| ||| |||  
+ ||  ||| ||| |||  
+ HD  LTR CTR RTR  
+  _  _   _  _	
+  |  |   |  | 	
+  |_ |_  |_ |_	
+  || ||  || ||	
+  || ||  || ||	
+  LA RA  LL RL	
+
+
+Inventory/Internals display (min size 73x41)
+-------------------------------------------------------------------------																		
+							HEAD										
+																	
+							Life Support								
+							Sensors										
+LEFT ARM					Cockpit						RIGHT ARM					
+Shoulder					-Empty-						Shoulder							
+Upper Arm Actuator			Sensors						Upper Arm Actuator			
+Lower Arm Actuator			Life Support				Lower Arm Actuator					
+Heat Sink												Heat Sink											
+ISPPC													ISPPC								
+ISPPC													ISPPC						
+ISPPC						CENTER TORSO				ISPPC						
+-Empty-						Fusion Engine				-Empty-						
+-Empty-						Fusion Engine				-Empty-						
+-Empty-						Fusion Engine				-Empty-						
+-Empty-						Gyro						-Empty-						
+-Empty-						Gyro						-Empty-						
+							Gyro												
+							Gyro													
+LEFT TORSO					Fusion Engine				RIGHT TORSO							
+ISMediumLaser				Fusion Engine				ISSRM6									
+ISSmallLaser				Fusion Engine				ISSRM6						
+ISMachine Gun				ISMG Ammo (200)				ISMediumLaser					
+-Empty-						-Empty-						ISSmallLaser						
+-Empty-													ISMachine Gun				
+-Empty-													ISSRM6 Ammo					
+-Empty-													-Empty-						
+-Empty-													-Empty-					
+-Empty-													-Empty-					
+-Empty-													-Empty-					
+-Empty-													-Empty-					
+-Empty-													-Empty-			
+			LEFT LEG						RIGHT LEG															
+			Hip								Hip							
+			Upper Leg Actuator				Upper Leg Actuator											
+			Lower Leg Actuator				Lower Leg Actuator											
+			Foot Actuator					Foot Actuator										
+			Heat Sink						Heat Sink									
+			Heat Sink						Heat Sink															
+																		
+-------------------------------------------------------------------------
+AP:3		>This is a message that can go only until the edge of the display
+																				
+Hex:0101	Heading:SE	Walking									 		   		
+																				
+			H:9(3)						1-CT:MLAS .........	6-LT:SRM6[200]/60%	
+LA:15(6)				RA:15(6)		2-CT:SLAS/25%		7-LT:SRM4 ...		
+LT:25(8)	CT:30(10)	RT:25(8)		3-RA:MLAS ......	8:----				
+LTR:8		CTR:10		RTR:8			4-RA:MLAS/50%		9:----				
+LL:20(10)				RL:20(10)		5-LT:SRM4 .			0:----				
+										P-PUNCH/75%			K-KICK/50%			
+--------------------------------------------------------------------------------
+|		--		 |	
+|	/--|  |--\   |
+|---|  ASCII |---|	
+	|  MECH  |
+	 \______/		

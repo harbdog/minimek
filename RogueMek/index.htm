@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<link rel="stylesheet" media="screen" href="../css/MiniMek.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="all">
+
+<title>RogueMek - The BattleTech Inspired Roguelike</title>
+
+</head>
+
+<body>
+
+<div class="page-wrapper">
+	<section class="intro">
+		<header role="banner">
+			<h1>RogueMek</h1>
+		</header>
+
+		<div class="summary" role="article">
+			<h3><a href="RogueMek.htm">Launch RogueMek</a>
+			<a href="RogueMek.htm"><img src="../web-images/roguemek.png"></img></a></h3>
+			<p>RogueMek requires an <a href="http://html5test.com/index.html">HTML5 compliant browser</a>.</p>
+		</div>
+
+		<div class="preamble" role="article">
+			<p>No downloading is required, RogueMek will play directly in your browser. 
+			However, touch input is not supported and a keyboard is required.</p>
+		</div>
+	</section>
+	
+	<div class="supporting" role="main">
+		<div class="game" role="article">
+			<h3><a id="about">About</a></h3>
+			
+			<p><a href="RogueMek/RogueMek.htm">RogueMek</a> began in concept June of 2013, and the first bits of code came around mid July. 
+			The biggest influence for the concept of the game was <a href="http://sots-thepit.com/">Sword of the Stars: The Pit</a>, 
+			as its use of more than one move or attack per turn using an Action Point (AP) system is exactly what I felt was needed to bring
+			the BattleTech universe to the world of roguelikes.</p>
+			
+			<p>The first beta release is mostly a chance to tweak the game mechanics, and therefore is only a minor subset of the amount of features 
+			that I would like to implement. Head on over to the <a href="#faq">FAQ</a> for further information on what is coming down the road.
+			Its current state is the result of nearly 2 months of being like a second full time job for me. I hope you enjoy the game
+			as much as I enjoyed bringing it to life!</p>
+			
+			<p>&nbsp;-Eric "CapperDeluxe" H.</p>
+			
+		</div>
+		
+		<div class="game" role="article">
+			<h3><a id="performance">Performance</a></h3>
+			<p>I will constantly try to find ways to improve performance, however there are already a few things you can try if you 
+			are experiencing low frame rates or crashing while playing the game:</p>
+			
+			<ul>
+				<li>While developing the game I mostly used Chrome, which currently appears to be a faster browser in general for HTML5 and javascript.</li>
+				<br/>
+				<li>Due to the high amount of updates for animations such as projectiles and floating messages, if these appear slow try reducing the size of the browser window (800x600 minimum). 
+				Alternatively your browser has a built in zoom function, the shortcut to zoom in is <topaz8>CTRL</topaz8> + <topaz8>Mouse Wheel Up</topaz8>.</li>
+				<br/>
+				<li>If you experience a lot of crashing with a particular browser, try a different browser such as Firefox, IE, Opera 
+				to see if they are more stable.</li>
+				<br/>
+			</ul>
+		</div>
+
+		<div class="game" role="article">
+			<h3><a id="howto">How to Play</a></h3>
+			
+			<p>The first thing you will see when you enter the game is the logo screen, followed by the main menu after <topaz8>any</topaz8> key is pressed.</p>
+			
+			<p>&nbsp;<img src="images/main-menu.png"/><br/>
+			The '<topaz8-blue>@</topaz8-blue>' symbol represents your current selection in the menus and will also represent your mech in the game. 
+			Use '<<topaz8>WASD</topaz8>' or <<topaz8>Arrow Keys</topaz8> to navigate the menus. The <topaz8>Enter</topaz8> key selects a menu item and the <topaz8>Escape</topaz8> key returns to the previous menu.</p>
+			
+			<p>The <topaz8-blue>Controls</topaz8-blue> menu provides an in-game listing of all keys used to interact with the game. 
+			The controls currently cannot be changed but a future version may support re-binding. You can reference the <topaz8-blue>Controls</topaz8-blue>
+			menu at any time during the game by accessing the menu with the Escape key.
+			<br/>&nbsp;<img width="100%" src="images/controls-menu.png"/></p>
+			
+			<p>The <topaz8-blue>Theme</topaz8-blue> menu is where you can change the color theme of the game, and can also be accessed any time during the game by pressing the <topaz8>Escape</topaz8> key. 
+			You can also press either the '<topaz8>[</topaz8>' or '<topaz8>]</topaz8>' (left/right square bracket) keys at any time during the game to quickly cycle to the previous or next color theme.
+			<br/>&nbsp;<img width="100%" src="images/theme-menu.png"/></p>
+			
+			<p>The <topaz8-blue>Start New Game</topaz8-blue> menu is where you will enter your name and select your mech before entering the arena. 
+			Press <topaz8>Enter</topaz8> to begin typing in your <topaz8-blue>Call Sign</topaz8-blue> and press <topaz8>Enter</topaz8> after to accept the name.
+			<br/>&nbsp;<img src="images/new-game-menu.png"/></p>
+			
+			<p>Choosing your <topaz8-blue>Mech</topaz8-blue> is easy, choosing which one is the only hard part! 
+			The list is ordered from the lightest mechs at the top to the heaviest at the bottom. 
+			The "<topaz8>^^^</topaz8>" and "<topaz8>vvv</topaz8>" indicators appear when there are more above or below, respectively.
+			As you navigate through the list an ASCII rendered image of the mech is displayed, along with its name, 
+			Action Points (<topaz8-blue>AP</topaz8-blue>), weapons and other useful information about the mech.
+			<br/>&nbsp;<img width="100%" src="images/mech-menu.png"/></p>
+			
+			<p>The <topaz8-blue>Launch Arena</topaz8-blue> option pits you against 7 randomly selected mechs in a free-for-all.</p>
+			
+			<p>The <topaz8-blue>Custom Battle</topaz8-blue> option allows you to select specific mechs to fight with and against.
+			After selecting your teams and opponents, select <topaz8-blue>Launch Battle</topaz8-blue> to enter the arena.
+			<br/>&nbsp;<img src="images/custom-battle-menu.png"/>
+			<br/>Use the number keys <topaz8-blue>1-0</topaz8-blue> to set the selected player or bot mech to team number 1 through 10. Teams 1 through 9 will all start the match together
+			around the same section of the map, while having No Team or Team 10 will be randomly placed throughout the map. The starting positions of each team correspond to the numbers
+			on the compass below:</p>
+			<pre>
+<topaz8>
+         <topaz8-blue>N</topaz8-blue>
+      5  1  7
+       \ | /
+    <topaz8-blue>W</topaz8-blue> 3--9--4 <topaz8-blue>E</topaz8-blue>
+       / | \
+      8  2  6
+         <topaz8-blue>S</topaz8-blue>
+</topaz8>
+			</pre>
+		</div>
+		
+		<div class="game" role="article">
+			<h3><a id="environment">Environment</a></h3>
+			
+			<p>When you enter the arena, the first thing you will want to do a take a look at your surroundings.
+			Press the '<topaz8>L</topaz8>' key to toggle <topaz8-blue>Free Look Mode</topaz8-blue>, 
+			where you can freely scroll around the map display using the 'WASD' or Arrow Keys.  Press the key again to leave free look.</p>
+			
+			<p>This is a <topaz8-blue>Hex</topaz8-blue>. Each hex can contain a single mech and may have some terrain features. 
+			The following are examples of hexes in order of appearance:
+			<br/><br/> Empty, Forest, Heavy Forest, Elevation Height 2, Rough, Water Depth 1
+			<br/>&nbsp;<img src="images/hex-unit.png"/>
+			&nbsp;<img src="images/hex-forest.png"/>
+			&nbsp;<img src="images/hex-heavy-forest.png"/>
+			&nbsp;<img src="images/hex-level2.png"/>
+			&nbsp;<img src="images/hex-rough.png"/>
+			&nbsp;<img src="images/hex-water1.png"/>
+			<br/>Note that when a number exists on the sides of any hex it represents either the height or depth of the terrain.</p>
+			
+			<p>When put together, the terrain features of the map look like this. 
+			<br/>&nbsp;<img src="images/map-sample.png"/></p>
+		</div>
+		
+		<div class="game" role="article">
+			<h3><a id="interface">Interface</a></h3>
+			
+			<p>At the bottom of the screen is the <topaz8-blue>AP</topaz8-blue>, <topaz8-blue>Armor</topaz8-blue>, and <topaz8-blue>Weapons</topaz8-blue> for your mech. 
+			Additional information is available as well, such as hex number, heading, and movement status.
+			<br/>&nbsp;<img width="100%" src="images/player-stats.png"/></p>
+			
+			<p>The <topaz8-blue>AP</topaz8-blue> indicator displays the number of remaining Action Points for the turn.
+			Also, if your mech has Jump Jets, a <topaz8-blue>JP</topaz8-blue> indicator will appear for your remaining Jump Points. 
+			These will be explained in more detail later in the <em>Movement</em> section.</p>
+			
+			<p>The <topaz8-blue>Armor</topaz8-blue> graph shows the External Armor, Internal Armor, and Rear Armor (where applicable) 
+			for each hit location on your mech. The default bar graph is a relative indicator based on armor remaining from 100%. 
+			<br/><br/>* An alternate numbered armor display can be toggle by pressing the '<topaz8>/</topaz8>' (Forward Slash) key.</p>
+			
+			<p>The <topaz8-blue>Weapons</topaz8-blue> list contains each available weapon and the number that is pressed to fire it. 
+			After the number, it shows the location, name, ammo (if applicable), percent chance to hit target, and cooldown (after being fired) for the weapon. 
+			These will be explained in more detail later in the <em>Combat</em> section.</p>
+			
+			<p>At the bottom right of the screen is the <topaz8-blue>Heat</topaz8-blue> indicator for your mech. 
+			As your mech builds up heat from firing weapons and movement you may trigger one of the listed side effects. 
+			This will also be explained in more detail later in the <em>Combat</em> section.
+			<br/>&nbsp;<img src="images/player-heat.png"/></p>
+			
+			<p>At the top right of the screen is the <topaz8-red>Target</topaz8-red> information.
+			<br/>&nbsp;<img src="images/target-stats.png"/></p>
+		</div>
+		
+		<div class="game" role="article">
+			<h3><a id="movement">Movement</a></h3>
+			
+			<p>During your turn, your hex will be outlined in the 'player color' inherited from the theme. 
+			The '<topaz8-blue>@</topaz8-blue>' represents your mech and the solid line indicator is your current heading.</p>
+			
+			<p>North-West, North, North-East
+			<br/>&nbsp;<img src="images/player-nw.png"/>
+			&nbsp;<img src="images/player-n.png"/>
+			&nbsp;<img src="images/player-ne.png"/>
+			<br/>&nbsp;<img src="images/player-sw.png"/>
+			&nbsp;<img src="images/player-s.png"/>
+			&nbsp;<img src="images/player-se.png"/>
+			<br/>South-West, South, South-East</p>
+			
+			<p>The '<topaz8>A</topaz8>/<topaz8>D</topaz8>' or <topaz8>Left</topaz8>/<topaz8>Right Arrow</topaz8> keys 
+			will rotate your heading Counter-Clockwise or Clockwise, respectively. 
+			Each rotate performed costs <topaz8-blue>1 AP</topaz8-blue>.</p>
+			
+			<p>The '<topaz8>W</topaz8>/<topaz8>S</topaz8>' or <topaz8>Up</topaz8>/<topaz8>Down Arrow</topaz8> keys 
+			will move your mech forward or backward, respectively. 
+			Each movement costs at least <topaz8-blue>1 AP</topaz8-blue>, with additional <topaz8-blue>AP</topaz8-blue> required 
+			for certain types of terrain.  Furthermore, moving backward is limited to walking only. 
+			So a mech with two <topaz8-blue>AP</topaz8-blue> could move forward two hexes (if unhindered by terrain), but only move backward one hex.
+			</p>
+			
+			<p>A <topaz8-blue>Charge</topaz8-blue> attack can be performed by moving into a hex occupied by an enemy mech. 
+			If successful it will deal damage to the enemy mech based on the attacker mech's weight and the number of hexes moved that turn. 
+			The attacking mech will also take damage based on the weight of the enemy mech.</p>
+			
+			<p>The '<topaz8>J</topaz8>' key toggles jump jets on or off, but only if your mech is equipped with <em>Jump Jets</em> 
+			as indicated by the <topaz8-blue>JP</topaz8-blue> number at the bottom of the screen. 
+			When activated, you can freely rotate your mech without expending <topaz8-blue>AP</topaz8-blue> 
+			to set the heading you will be facing after the jump move. The numbers '<topaz8-blue>1-6</topaz8-blue>' that appear 
+			on the screen in the middle of adjacent hexes correspond to the number key you press to move into that hex.
+			<br/>&nbsp;<img src="images/player-jump.png"/>
+			<br/>Jumping into any adjacent hex only costs <topaz8-blue>1 JP</topaz8-blue> and also consumes <topaz8-blue>1 AP</topaz8-blue>. 
+			Only <topaz8-blue>1 JP</topaz8-blue> is regenerated per turn, so plan your jumps wisely!</p>
+			
+			<p>A <topaz8-blue>DFA</topaz8-blue> attack, or <topaz8-blue>Death From Above</topaz8-blue>, can be performed by jumping into a hex occupied by an enemy mech. 
+			This attack is considered risky because while it can do large amounts of damage to the enemy mech, it also damages the legs of your 
+			mech and may cause your own mech to fall in the process.</p>
+			
+			<p>When moving into a hex (without jumping), it may require more than one <topaz8-blue>AP</topaz8-blue> to enter. 
+			Pressing '<topaz8>Q</topaz8>' will show an overlay with the amount of <topaz8-blue>AP</topaz8-blue> it would take to get into each 
+			hex that your mech can enter that turn. 
+			<br/>&nbsp;<img src="images/player-overlay.png"/></p>
+			
+			<p><em>"In real combat, speed is life. You go slow, you die."</em>
+			<br/>&nbsp;-<a href="http://www.youtube.com/watch?v=-H5elKwYi28">Sgt. "Deadeye" Unther</a></p>
+			
+			<p>While movement does decrease your ability to hit the enemy, it can do the same for your enemy's ability to hit you. 
+			Each hex moved during your turn grants a <topaz8-blue>+1 To Hit</topaz8-blue> from enemy weapons fire.</p>
+			
+			<p>Throughout the course of a game, a mech may fall and become <topaz8-blue>Prone</topaz8-blue>. A mech that has fallen will 
+			take damage based on its tonnage and be indicated as <topaz8-blue>Prone</topaz8-blue> with '<topaz8>vvv</topaz8>' under the character 
+			representing the fallen mech. To attempt to stand up, a fallen mech only needs to move forward or backward, using <topaz8-blue>1 AP</topaz8-blue> per attempt to stand. 
+			Turning while fallen will let the mech remain prone on the ground.</p>
+		</div>
+		
+		<div class="game" role="article">
+			<h3><a id="combat">Combat</a></h3>
+			
+			<p>Before any weapons fire can begin, you will need to target an enemy. 
+			Select the nearest live enemy by pressing the '<topaz8>R</topaz8>' key, the next enemy by pressing '<topaz8>T</topaz8>', 
+			or the previous enemy by pressing '<topaz8>Y</topaz8>'. Assuming the target is in range and in <em>Line Of Sight</em>, 
+			you will see each weapon provide a percent chance that weapon can hit the target.
+			<br/>&nbsp;<img src="images/player-target.png"/>&nbsp;<img src="images/player-tohit.png"/>
+			<br/>&nbsp;<img src="images/player-weapons.png"/></p>
+			
+			<p>To end the turn without firing any weapons, either use all of your <topaz8-blue>AP</topaz8-blue> for movement, or (<em>with Group Fire disabled</em>), 
+			end the turn by pressing either the <topaz8>Enter</topaz8>, <topaz8>Spacebar</topaz8>, or <topaz8>Period</topaz8> key.</p>
+			
+			<p>At any time during the game, you can press the '<topaz8>F</topaz8>' key to display the <topaz8-blue>Firing Arc</topaz8-blue> for your mech.</p>
+			
+			<p>To fire a single weapon at the target, press the '<topaz8>1-0</topaz8>' number key corresponding to the weapon. 
+			If you are only one hex from the target, you may also perform a <topaz8-blue>Punch</topaz8-blue> or <topaz8-blue>Kick</topaz8-blue> attack 
+			by pressing '<topaz8>P</topaz8>' or '<topaz8>K</topaz8>', respectively.  Firing any weapon or using physical attacks will end your turn, 
+			so be sure to make any desired movement first.</p>
+			
+			<p>To <topaz8-blue>Group Fire</topaz8-blue> any number of weapons at the target, press the '<topaz8>\</topaz8>' (Backslash) key 
+			to toggle group fire mode. While enabled, you will see an indicator and any number keys pressed will ready them for fire as 
+			indicated by '<topaz8-blue>GRP</topaz8-blue>'.
+			<br/>&nbsp;<img src="images/player-groupfire.png"/>
+			<br/>To fire all selected weapons, end the turn by pressing either the <topaz8>Enter</topaz8>, 
+			<topaz8>Spacebar</topaz8>, or <topaz8>Period</topaz8> key.</p>
+			
+			<p>After firing any weapon or using a physical attack, the weapon may need to <topaz8-blue>cooldown</topaz8-blue> before being able to fire again. 
+			This is indicated by a series of '.' (Period) characters representing number of turns until it can be used again.
+			<br/>&nbsp;<img src="images/player-weapons-cooldown.png"/>
+			<br/>Some weapons require more turns than others before being able to fire again.</p>
+			
+			<p><topaz8-red>Heat</topaz8-red> generation and dissipation occur at the end of each of your turns. 
+			The current heat level is shown and whether any negative heat effects are in effect. 
+			The heat diff indicator shows the heat generated and heat dissipated from the actions of the previous turn. 
+			The amount of heat dissipated is directly related to the number of active heatsinks installed in your mech.
+			<br/>&nbsp;<img src="images/player-heat-generation.png"/>
+			<br/><topaz8-red>&nbsp;-1MP</topaz8-red> = Your mech Walk MP is reduced by 1
+			<br/><topaz8-red>+1HIT</topaz8-red> = Your mech suffers +1 to all weapons fire
+			<br/><topaz8-red>&nbsp;SD8%</topaz8-red> = Your mech has an 8% chance to shutdown automatically
+			<br/><topaz8-red>&nbsp;AE8%</topaz8-red> = Your mech has an 8% chance to have an ammo explosion</p>
+			
+			<p><topaz8-red>Critical Hits</topaz8-red> may occur when mechs take damage to their internal structure, after their external armor has been penetrated. 
+			These may cause weapons to be destroyed, increase your mech's heat buildup, decrease your weapons chance to hit, or even destroy your mech. 
+			Press the '<topaz8>I</topaz8>' key to view the status of your internal critical slots.
+			<br/>&nbsp;<img width="100%" src="images/player-internals.png"/></p>
+			
+			<p>While we're here, pressing the '<topaz8>I</topaz8>' key also displays some extended information about your mech's weapons. 
+			At the bottom of the internals screen you can view the damage, heat, cooldown, remaining ammo, and the minimum, short, medium, long ranges for each weapon.
+			<br/>&nbsp;<img width="100%" src="images/player-weapons-stats.png"/>
+			<br/>Press the '<topaz8>I</topaz8>' key again to close the internals screen.</p>
+		</div>
+		
+		<div class="game" role="article">
+			<h3><a id="endgame">End Game</a></h3>
+			
+			<p>The end of the battle is determined when all enemy mechs have been destroyed or when the player's mech is destroyed. 
+			In the latter case, the player can continue to spectate the AI mechs. To start a new game, press <topaz8>Escape</topaz8> to access the menu at any time.
+			<br/><br/><img src="images/player-won.png"/>
+			<br/><br/><img width="100%" src="images/player-destroyed.png"/></p>
+		</div>
+
+		<div class="game" role="article">
+			<h3><a id="faq">FAQ</a></h3>
+			<p>Q: How is AP/JP calculated for each mech?
+			<br/>A: AP is the mech's Walk MP divided by 2 and rounded up.  So a mech with 3 or 4 Walk MP get 2 AP per turn. 
+			JP is calculated the same way, but based on the mech's Jump MP (number of equipped Jump Jets).</p>
+			
+			<p>Q: Why is each turn only 1/4th of a BattleTech board game turn?
+			<br/>A: I wanted the game to be faster paced than the board game, and originally went with a 1/10th CBT turn. 
+			However, after getting the first playable prototype using this I realized it wasn't very fun to only move one hex or shoot one weapon per turn, 
+			as did a few others I let playtest it for me. I found there were some Solaris rules where a 1/4th CBT turn were used and figured 
+			it might work here too. I was pleased with the results and feedback I got, so this is where it stays!</p>
+			
+			<p>Q: What is planned for the future of this game?
+			<br/>A: The classic ASCII based version of this game is more a proof of concept of the gameplay. I do intend to round out some key features before 
+			moving on the next stage, such as random map generation, smarter AI, and friendly AI. Afterward, I would like to move to a new architecture to 
+			include 2D sprites and a completely new UI. Other possibilities may include leaderboards, online persisted pilots, custom mech loadouts, 
+			and maybe even some form of multiplayer (no promises)!</p>
+		</div>
+
+		<footer>
+			<p>Links
+			<BR>&nbsp;<a href="../index.htm">MiniMek Home</a>
+			<BR>&nbsp;<a href="https://sourceforge.net/projects/minimek/">SourceForge project page</a>
+			<BR>&nbsp;<a href="http://www.classicbattletech.com/" title="The game that inpsired these games">BattleTech</a>
+			<a href="http://megamek.info/" title="The game with the resources">MegaMek</a>
+			<a href="http://en.wikipedia.org/wiki/HTML5" title="The technology behind the scenes">HTML5</a>
+			<a href="http://www.gnu.org/licenses/licenses.html" title="The open source license">GPL</a>
+			</p>
+		</footer>
+	</div>
+	
+	<aside class="sidebar" role="complementary">
+		<div class="wrapper">
+			<div class="anchor-selection" id="anchor-selection">
+				<h3 class="select">&nbsp;</h3>
+				<nav role="navigation">
+					<ul>				
+						<li>
+							<a href="#about" class="design-name">About</a>
+						</li>	
+						<li>
+							<a href="#performance" class="design-name">Performance</a>
+						</li>
+						<li>
+							<a href="#howto" class="design-name">How to Play</a>
+						</li>
+						<li>
+							<a href="#environment" class="design-name">&nbsp;-Environment</a>
+						</li>
+						<li>
+							<a href="#interface" class="design-name">&nbsp;-Interface</a>
+						</li>
+						<li>
+							<a href="#movement" class="design-name">&nbsp;-Movement</a>
+						</li>
+						<li>
+							<a href="#combat" class="design-name">&nbsp;-Combat</a>
+						</li>
+						<li>
+							<a href="#endgame" class="design-name">&nbsp;-End Game</a>
+						</li>
+						<li>
+							<a href="#faq" class="design-name">FAQ</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</aside>
+</div>
+
+</body>
+</html>

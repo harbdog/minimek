@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MiniMek - RogueMek</title>
+
+<style id="css">
+	@font-face {
+		font-family: 'Topaz-8';
+		src: url('images/Topaz-8.ttf');
+	}
+</style>
+
+<script language="javascript" src="lib/prototype.js" ></script>
+<script language="javascript" src="lib/jquery-2.0.3.js" ></script>
+<script language="javascript" src="src/RogueMekMechs.js"></script>
+<script language="javascript" src="src/RogueMek.js"></script>
+<script language="javascript" src="src/RogueMekBot.js"></script>
+<script language="javascript" src="src/RogueMekTerminal.js"></script>
+
+<script language="javascript">
+	debug.setDebug(true);
+</script>
+
+</head>
+<body onresize="resize_canvas()">
+	<div style="font-family: Topaz-8;"></div>
+	
+    <div id="container" style="position:absolute; left:0px; top:0px; border:0px solid; width:100%; height:100%; margin: 0px;">
+    	
+        <canvas id="canvas">Your browser dosen't support HTML5, upgrade to the recent browser version!
+        </canvas>
+        
+    </div>
+</body>
+</html>
